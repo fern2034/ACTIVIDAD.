@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar si un número es par</title>
+ <link rel="stylesheet" href="css/estilopar.css">
+</head>
+<body>
+
+    <h1>Verificar si un número es par</h1>
+
+    <!-- Campo de entrada para el número -->
+    <input type="number" id="numero" placeholder="Ingresa un número" />
+    <br>
+
+    <!-- Botón para verificar si es par -->
+    <button onclick="verificarPar()">Verificar</button>
+
+    <!-- Elemento donde se mostrará el resultado -->
+    <p id="resultado"></p>
+
+    <script>
+        function verificarPar() {
+            // Obtener el valor del número ingresado
+            var numero = document.getElementById("numero").value;
+            
+            // Verificar si el número es par
+            if (numero % 2 === 0) {
+                document.getElementById("resultado").innerText = "El número " + numero + " es par.";
+            } else {
+                document.getElementById("resultado").innerText = "El número " + numero + " no es par.";
+            }
+        }
+    </script>
+
+</body>
+</html>
